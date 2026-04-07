@@ -1,0 +1,60 @@
+{
+  "resources/fonts/Oswald-Bold.ttf": {
+    "file": "assets/Oswald-Bold-53f4d450.ttf",
+    "src": "resources/fonts/Oswald-Bold.ttf"
+  },
+  "resources/fonts/Oswald-ExtraLight.ttf": {
+    "file": "assets/Oswald-ExtraLight-9d8d3f94.ttf",
+    "src": "resources/fonts/Oswald-ExtraLight.ttf"
+  },
+  "resources/fonts/Oswald-Light.ttf": {
+    "file": "assets/Oswald-Light-aecfcef5.ttf",
+    "src": "resources/fonts/Oswald-Light.ttf"
+  },
+  "resources/fonts/Oswald-Medium.ttf": {
+    "file": "assets/Oswald-Medium-2d83926b.ttf",
+    "src": "resources/fonts/Oswald-Medium.ttf"
+  },
+  "resources/fonts/Oswald-Regular.ttf": {
+    "file": "assets/Oswald-Regular-84157795.ttf",
+    "src": "resources/fonts/Oswald-Regular.ttf"
+  },
+  "resources/fonts/Oswald-SemiBold.ttf": {
+    "file": "assets/Oswald-SemiBold-dc16adb4.ttf",
+    "src": "resources/fonts/Oswald-SemiBold.ttf"
+  },
+  "resources/fonts/iu.eot": {
+    "file": "assets/iu-268e1f3f.eot",
+    "src": "resources/fonts/iu.eot"
+  },
+  "resources/fonts/iu.svg": {
+    "file": "assets/iu-6f050455.svg",
+    "src": "resources/fonts/iu.svg"
+  },
+  "resources/fonts/iu.ttf": {
+    "file": "assets/iu-e393bcb9.ttf",
+    "src": "resources/fonts/iu.ttf"
+  },
+  "resources/fonts/iu.woff": {
+    "file": "assets/iu-a07bee5f.woff",
+    "src": "resources/fonts/iu.woff"
+  },
+  "resources/img/15-min.webp": {
+    "file": "assets/15-min-00cd24ff.webp",
+    "src": "resources/img/15-min.webp"
+  },
+  "resources/img/logo.png": {
+    "file": "assets/logo-82fb416c.png",
+    "src": "resources/img/logo.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-d4b42df8.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-304379a8.css",
+    "isEntry": true,
+    "src": "resources/sass/app.scss"
+  }
+}

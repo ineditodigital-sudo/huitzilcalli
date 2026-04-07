@@ -1,0 +1,1 @@
+<footer>Footer</footer><?php /**PATH C:\xampp\htdocs\laureles-web\resources\views/frontend/inc/footer.blade.php ENDPATH**/ ?>

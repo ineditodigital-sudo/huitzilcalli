@@ -1,0 +1,59 @@
+@use "sass:map";
+
+/* LOGIN */
+.login-bg{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color:hsla(97,6%,23%,1);
+    background-image:
+        radial-gradient(at 76% 0%, hsla(33,81%,60%,0.63) 0px, transparent 50%),
+        radial-gradient(at 2% 100%, hsla(95,6%,15%,1) 0px, transparent 50%);
+
+    .card{
+        box-shadow: 0 1rem 24px rgba(0,0,0,0.25);
+        // background-color: map.get($theme-colors,"secondary");
+        background-color: transparent;
+
+        .img-logo img{
+            filter: contrast(4.5) grayscale(1) invert(1);
+            mix-blend-mode: lighten !important;
+        }
+
+        .form-control{
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid map.get($theme-colors,"light") !important;
+            border-radius: 0;
+            color: #fff;
+
+            &:focus{
+                box-shadow: none;
+            }
+        }
+
+        .input-group{
+            span.input-group-text{
+                border-radius: 0;
+                background-color: map.get($theme-colors, 'primary');
+                font-size: 1rem;
+                border: none
+            }
+
+            .btn{
+                background: transparent;
+                border-radius: 0;
+                border: none;
+                border-bottom: 1px solid map.get($theme-colors,"light") !important;
+                color: map.get($theme-colors, 'primary');
+
+                &:hover{
+                    background: map.get($theme-colors, 'primary');
+                    color: map.get($theme-colors, 'dark');
+                }
+            }
+        }
+    }
+}
+/* LOGIN */

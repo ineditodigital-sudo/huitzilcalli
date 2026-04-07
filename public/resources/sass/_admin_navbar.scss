@@ -1,0 +1,46 @@
+@use "sass:map";
+
+.aiz-topbar{
+    background: map.get($theme-colors,"primary");
+
+    .aiz-mobile-toggler{
+        span{
+            background: #fffb;
+            transition: all 0.15s ease-in-out;
+
+            &::after, &::before{
+                background: #fffb;
+                transition: all 0.15s ease-in-out;
+            }
+        }
+
+        &:hover{
+            span{
+                background: #fff;
+    
+                &::after, &::before{
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .avatar{
+        color: #fffd;
+        // transition: all 0.15s ease-in-out;
+
+        // &:hover{
+        //     color: #fff;
+        // }
+    }
+
+    .btn-outline-light{
+        border: none; 
+        color: #fffb;
+
+        &:hover{
+            background: #fff3;
+            color: #fff;
+        }
+    }
+}
