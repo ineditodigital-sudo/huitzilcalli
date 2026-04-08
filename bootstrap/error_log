@@ -1,0 +1,24 @@
+[08-Mar-2026 11:30:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/huitzilcalli/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/bootstrap/app.php on line 14
+[14-Mar-2026 16:44:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/huitzilcalli/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/bootstrap/app.php on line 14
+[15-Mar-2026 09:43:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/huitzilcalli/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/bootstrap/app.php on line 14
+[16-Mar-2026 01:55:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/huitzilcalli/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/bootstrap/app.php on line 14
+[18-Mar-2026 05:19:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/huitzilcalli/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/bootstrap/app.php on line 14
+[21-Mar-2026 21:09:17 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/huitzilcalli/public_html/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/bootstrap/app.php on line 14
