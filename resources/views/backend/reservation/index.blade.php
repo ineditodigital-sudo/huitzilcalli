@@ -292,7 +292,7 @@
                         <div class="col-sm-12 mb-3">
                             <label for="basic-url" class="form-label">{{ __('Notas') }}</label>
                             <div class="input-group has-validation">
-                                <textarea type="text" id="notes" maxlength="500" name="notes" rows="4" class="form-control" style="resize: none;" placeholder="{{ __('Notas de la resrevación') }}" required></textarea>
+                                <textarea type="text" id="notes" maxlength="500" name="notes" rows="4" class="form-control" style="resize: none;" placeholder="{{ __('Notas de la reservación') }}" required></textarea>
                                 <span class="invalid-feedback" for="notes" role="alert">
                                     <strong></strong>
                                 </span>
@@ -611,7 +611,7 @@
             let auxId = document.getElementById('reservation_id').value;
             
             $.ajax({
-                url: "{{ route('reservaciones.store', ['service_type' => 'cabañas']); }}",
+                url: "{{ route('reservaciones.store', ['service_type' => 'cabañas']) }}",
                 method: 'POST',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

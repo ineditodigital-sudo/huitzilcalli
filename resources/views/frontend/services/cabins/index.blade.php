@@ -1,23 +1,48 @@
 @extends('frontend.layouts.index')
 
 @section('content')
-<div id="home-section" class="container-fluid" style="overflow-y: hidden;">
-    <div class="d-flex flex-column contPadre" style="height: 100dvh">
-        <header id="title-section" class="w-100 headerNew d-flex justify-content-center" style="flex-shrink: 0">
-            <div class="col-xl-4 col-lg-5 col-md-6">
-                <div class="d-flex justify-content-center">
-                    <div class="d-flex justify-content-center align-items-center" style="width:20%; aspect-ratio: 1/1;">
-                        <img class="img-fluid w-100"
-                            src="{{ __('https://huitzilcalli.com/resources/img/logo-lg.webp') }}" alt="Huitzilcalli">
-                    </div>
-                    <div class="d-flex flex-column justify-content-evenly ps-3">
-                        <h2 class="fw-bolder text-start text-uppercase mb-0 index-main" style="font-family: 'Oswald" ;>
-                            Huitzilcalli</h2>
+<div id="home-section" class="container-fluid">
+    <div class="d-flex flex-column contPadre">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm px-lg-5 py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="https://huitzilcalli.com/resources/img/logo-lg.webp" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+                <span class="fw-bold text-uppercase" style="font-family: 'Oswald'; color: #194421; letter-spacing: 1px;">Huitzilcalli</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold text-uppercase small" style="font-family: 'Oswald';">
+                    <li class="nav-item"><a class="nav-link px-3" href="#cabins-section">Cabañas</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#promotions-section">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#amenities-section">Amenidades</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="https://facebook.com/{{ $user->facebook }}" target="_blank">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex flex-column contPadre" style="padding-top: 80px;">
+        <header id="hero-section" class="w-100 d-flex flex-column justify-content-center align-items-center text-center py-5 mb-4" style="background: linear-gradient(rgba(25, 68, 33, 0.05), rgba(4, 163, 158, 0.05));">
+            <div class="container overflow-hidden">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8" data-aos="fade-up">
+                        <h1 class="display-4 fw-bolder text-uppercase mb-3" style="font-family: 'Oswald'; color: #194421;">
+                            Tu Refugio Natural en el Corazón de Aguascalientes
+                        </h1>
+                        <p class="fs-5 text-secondary mb-4 mx-auto" style="max-width: 600px;">
+                            Descubre la paz y el confort de nuestras cabañas exclusivas. El lugar perfecto para desconectarte y reconectar con la naturaleza.
+                        </p>
+                        <a href="#cabins-section" class="btn btn-lg text-white px-5 py-3 shadow-sm" style="background-color: #04A39E; border-radius: 3rem; font-family: 'Oswald';">
+                            Explorar Cabañas
+                        </a>
                     </div>
                 </div>
             </div>
         </header>
-        <div style="flex-grow: 1; overflow-y: auto; scrollbar-width: none; flex-direction: column;align-items: center;" class="d-flex d-md-block d-lg-block">
+
+        <div id="cabins-section" style="flex-grow: 1; flex-direction: column; align-items: center;" class="d-flex d-md-block d-lg-block pt-4">
         <!-- <h2>Cabañas</h2>
         <hr> -->
         <div class="row justify-content-evenly align-items-center w-100 listaItems"
@@ -62,9 +87,9 @@
             @endforeach
         </div>
 
-        <div class="row justify-content-center align-items-center w-100 my-4">
+        <div id="promotions-section" class="row justify-content-center align-items-center w-100 my-4 py-5">
             <div class="col-12 text-center">
-                <h2 class="fw-bolder text-uppercase mb-3" style="color: #04A39E; font-family: 'Oswald';">Promociones</h2>
+                <h2 class="fw-bolder text-uppercase mb-3" style="color: #04A39E; font-family: 'Oswald';">Promociones Exclusivas</h2>
                 @if(isset($promotions) && count($promotions) > 0)
                     <div class="row justify-content-center px-3">
                         @foreach($promotions as $promotion)
@@ -106,13 +131,10 @@
             </div>
         </div>
 
-        <!-- <h2 class="mt-5">Amenidades</h2> -->
-        <div class="w-100">
-            <hr class="d-block d-md-none d-lg-none">
-        </div>
-        
-        <div class="row justify-content-evenly align-items-center w-100 listaItems"
-            style="">
+        <div id="amenities-section" class="row justify-content-evenly align-items-center w-100 listaItems py-5" style="">
+            <div class="col-12 text-center mb-4">
+                <h2 class="fw-bolder text-uppercase mb-3" style="color: #194421; font-family: 'Oswald';">Nuestras Amenidades</h2>
+            </div>
             @foreach($amenities as $c => $amenity)
                 <div class="col-xl-2 col-lg-2 col-md-2 d-flex">
                     <a href="{{ route('detalles', ['slug' => $amenity->slug]) }}"
@@ -166,25 +188,36 @@
         }
     </style>
 
-        <footer class="w-100 px-2 footerNew" style="flex-shrink: 0">
-            <div class="d-flex justify-content-between align-items-center py-2">
-                <div class="">
-                    <a href="https://facebook.com/{{ $user->facebook }}" target="_blank"
-                        class="btn btn-outline-secondary btn-icon rounded-circle mx-2"
-                        style="width: 3rem; aspect-ratio: 1/1;">
-                        <i class="uil uil-facebook-f fs-4"></i>
-                    </a>
-                    <a href="https://instagram.com/{{ $user->instagram }}" target="_blank"
-                        class="btn btn-outline-secondary btn-icon rounded-circle mx-2"
-                        style="width: 3rem; aspect-ratio: 1/1;">
-                        <i class="uil uil-instagram fs-4"></i>
-                    </a>
+        <footer class="w-100 px-lg-5 py-5 footerNew bg-dark text-light" style="flex-shrink: 0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <h4 class="fw-bold text-uppercase mb-3" style="font-family: 'Oswald'; color: #04A39E;">Huitzilcalli</h4>
+                        <p class="small text-secondary">Ofrecemos una experiencia única de descanso y conexión con la naturaleza en Aguascalientes. Tu bienestar es nuestra prioridad.</p>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h4 class="fw-bold text-uppercase mb-3" style="font-family: 'Oswald';">Navegación</h4>
+                        <ul class="list-unstyled small">
+                            <li><a href="#hero-section" class="text-secondary text-decoration-none">Inicio</a></li>
+                            <li><a href="#cabins-section" class="text-secondary text-decoration-none">Nuestras Cabañas</a></li>
+                            <li><a href="#promotions-section" class="text-secondary text-decoration-none">Ofertas Especiales</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h4 class="fw-bold text-uppercase mb-3" style="font-family: 'Oswald';">Síguenos</h4>
+                        <div class="d-flex">
+                            <a href="https://facebook.com/{{ $user->facebook }}" target="_blank" class="btn btn-outline-light btn-icon rounded-circle me-2" style="width: 2.5rem; height: 2.5rem;">
+                                <i class="uil uil-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com/{{ $user->instagram }}" target="_blank" class="btn btn-outline-light btn-icon rounded-circle me-2" style="width: 2.5rem; height: 2.5rem;">
+                                <i class="uil uil-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="">
-                    <!--<button class="btn btn-outline-secondary d-flex align-items-center mx-2 fs-5" type="button" data-bs-toggle="modal" data-bs-target="#more-info" style="border-radius: 3rem;">
-                            <i class="uil uil-info-circle fs-4 me-2"></i>
-                            M��s informaci��n
-                        </button>-->
+                <hr style="border-color: rgba(255,255,255,0.1)">
+                <div class="text-center small text-secondary mt-3">
+                    <p>&copy; {{ date('Y') }} Cabañas Huitzilcalli. Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>

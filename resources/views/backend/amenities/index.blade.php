@@ -90,10 +90,10 @@
                             </div>
                         </div>
                     </td>
-                    <td style="max-width: 10rem">
-                        <div class="row gutters-5 w-300px w-md-300px mw-100">
+                    <td style="max-width: 250px;">
+                        <div class="row gutters-5 w-200px w-md-300px mw-100">
                             <div class="col">
-                                <span class="text-muted text-truncate-2" style="overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;">{{ $amenity->description }}</span>
+                                <span class="text-muted text-truncate-2" style="overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">{{ $amenity->description }}</span>
                             </div>
                         </div>
                     </td>
@@ -822,7 +822,7 @@
             //console.log({preloaded});
 
             $.ajax({
-                url: "{{ route('amenidades.store'); }}",
+                url: "{{ route('amenidades.store') }}",
                 method: 'POST',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

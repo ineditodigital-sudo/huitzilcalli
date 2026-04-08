@@ -247,207 +247,154 @@
                 <input type="text" id="cabin_id" name="cabin_id" readonly hidden disabled>
                 <input type="text" id="amenities" name="amenities" readonly hidden disabled>
                 <div class="modal-body">
-                    <div class="row">
-                        <h2 class="h5 mt-3 fw-bold">{{ __('Información Básica') }}</h2>
-                        <div class="col-md-6">
+                    <!-- Nav Tabs -->
+                    <ul class="nav nav-pills nav-fill mb-4 p-1 bg-light rounded-pill" id="cabinTabs" role="tablist" style="border: 1px solid #eee;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active rounded-pill fw-bold text-uppercase small" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-controls="info" aria-selected="true">
+                                <i class="uil uil-info-circle me-1"></i> {{ __('Info Básica') }}
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill fw-bold text-uppercase small" id="location-tab" data-bs-toggle="tab" data-bs-target="#location" type="button" role="tab" aria-controls="location" aria-selected="false">
+                                <i class="uil uil-map-marker me-1"></i> {{ __('Ubicación') }}
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill fw-bold text-uppercase small" id="amenities-tab-nav" data-bs-toggle="tab" data-bs-target="#amenities-pane" type="button" role="tab" aria-controls="amenities-pane" aria-selected="false">
+                                <i class="uil uil-star me-1"></i> {{ __('Amenidades') }}
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link rounded-pill fw-bold text-uppercase small" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab" aria-controls="gallery" aria-selected="false">
+                                <i class="uil uil-image-v me-1"></i> {{ __('Galería') }}
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="cabinTabContent">
+                        <!-- Tab 1: Info Básica -->
+                        <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
                             <div class="row">
                                 <div class="col-sm-7 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Nombre') }}</label>
+                                    <label for="name" class="form-label px-2 fw-bold small text-muted text-uppercase">{{ __('Nombre') }}</label>
                                     <div class="input-group has-validation">
-                                        <!-- <span class="input-group-text">
-                                            <i class="uil uil-estate"></i>
-                                        </span> -->
-                                        <input type="text" id="name" name="nombre" class="form-control" placeholder="{{ __('Nombre de la cabaña') }}" required>
-                                        <span class="invalid-feedback" for="name" role="alert">
-                                            <strong></strong>
-                                        </span>
+                                        <input type="text" id="name" name="nombre" class="form-control rounded-3" placeholder="{{ __('Nombre de la cabaña') }}" required>
+                                        <span class="invalid-feedback" for="name" role="alert"><strong></strong></span>
                                     </div>
                                 </div>
-                                
                                 <div class="col-sm-3 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Cupo') }}</label>
+                                    <label for="capacity" class="form-label px-2 fw-bold small text-muted text-uppercase">{{ __('Cupo') }}</label>
                                     <div class="input-group">
-                                        <input type="number" step="1" id="capacity" name="capacidad" class="form-control" placeholder="{{ __('Cupo de la cabaña') }}" required>
-                                        <span class="invalid-feedback" for="capacity" role="alert">
-                                            <strong></strong>
-                                        </span>
+                                        <input type="number" step="1" id="capacity" name="capacidad" class="form-control rounded-3" placeholder="{{ __('Cupo') }}" required>
+                                        <span class="invalid-feedback" for="capacity" role="alert"><strong></strong></span>
                                     </div>
                                 </div>
-                                
                                 <div class="col-sm-2 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Color') }}</label>
+                                    <label for="color" class="form-label px-2 fw-bold small text-muted text-uppercase">{{ __('Color') }}</label>
                                     <div class="input-group has-validation">
-                                        <!-- <span class="input-group-text">
-                                            <i class="uil uil-estate"></i>
-                                        </span> -->
-                                        <input type="color" id="color" name="color" class="form-control form-control-color" required>
-                                        <span class="invalid-feedback" for="name" role="alert">
-                                            <strong></strong>
-                                        </span>
+                                        <input type="color" id="color" name="color" class="form-control form-control-color w-100 rounded-3" required>
                                     </div>
                                 </div>
-
                                 <div class="col-sm-12 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Descripción') }}</label>
+                                    <label for="description" class="form-label px-2 fw-bold small text-muted text-uppercase">{{ __('Descripción') }}</label>
                                     <div class="input-group has-validation">
-                                        <textarea type="text" id="description" maxlength="500" name="descripción" rows="4" class="form-control" style="resize: none;" placeholder="{{ __('Descripción de la cabaña') }}" required></textarea>
-                                        <span class="invalid-feedback" for="description" role="alert">
-                                            <strong></strong>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Precio: Domingo a Viernes') }}</label>
-                                    <div class="input-group has-validation">
-                                        <input type="number" id="precio1" name="precio1" class="form-control" placeholder="{{ __('$ 0.00') }}" required>
-                                        <span class="invalid-feedback" for="precio1" role="alert">
-                                            <strong></strong>
-                                        </span>
+                                        <textarea type="text" id="description" maxlength="500" name="descripción" rows="4" class="form-control rounded-3" style="resize: none;" placeholder="{{ __('Descripción detallada') }}" required></textarea>
+                                        <span class="invalid-feedback" for="description" role="alert"><strong></strong></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Precio: Sábado') }}</label>
+                                    <label for="precio1" class="form-label px-2 fw-bold small text-muted text-uppercase">{{ __('Precio: Domingo a Viernes') }}</label>
                                     <div class="input-group has-validation">
-                                        <input type="text" id="precio2" name="precio2" class="form-control" placeholder="{{ __('$ 0.00') }}" required>
-                                        <span class="invalid-feedback" for="precio2" role="alert">
-                                            <strong></strong>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Entrada') }}</label>
-                                    <div class="input-group has-validation">
-                                        <input type="time" id="entrada" name="entrada" class="form-control" placeholder="{{ __('Hora de entrada') }}" required>
-                                        <span class="invalid-feedback" for="entrada" role="alert">
-                                            <strong></strong>
-                                        </span>
+                                        <span class="input-group-text bg-light border-end-0 text-muted">$</span>
+                                        <input type="number" id="precio1" name="precio1" class="form-control rounded-3 ps-1" placeholder="0.00" required>
+                                        <span class="invalid-feedback" for="precio1" role="alert"><strong></strong></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Salida') }}</label>
+                                    <label for="precio2" class="form-label px-2 fw-bold small text-muted text-uppercase">{{ __('Precio: Sábado') }}</label>
                                     <div class="input-group has-validation">
-                                        <input type="time" id="salida" name="salida" class="form-control" placeholder="{{ __('Hora de salida') }}" required>
-                                        <span class="invalid-feedback" for="salida" role="alert">
-                                            <strong></strong>
-                                        </span>
+                                        <span class="input-group-text bg-light border-end-0 text-muted">$</span>
+                                        <input type="text" id="precio2" name="precio2" class="form-control rounded-3 ps-1" placeholder="0.00" required>
+                                        <span class="invalid-feedback" for="precio2" role="alert"><strong></strong></span>
                                     </div>
                                 </div>
-
+                                <div class="col-sm-6 mb-3">
+                                    <label for="entrada" class="form-label px-2 fw-bold small text-muted text-uppercase">{{ __('Hora Entrada') }}</label>
+                                    <input type="time" id="entrada" name="entrada" class="form-control rounded-3" required>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <label for="salida" class="form-label px-2 fw-bold small text-muted text-uppercase">{{ __('Hora Salida') }}</label>
+                                    <input type="time" id="salida" name="salida" class="form-control rounded-3" required>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+
+                        <!-- Tab 2: Ubicación -->
+                        <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="location-tab">
+                            <div class="alert alert-info border-0 shadow-sm d-flex align-items-center mb-3">
+                                <i class="uil uil-info-circle fs-4 me-2"></i>
+                                <span class="small">{{ __('Arrastra el marcador en el mapa para ajustar la ubicación exacta de la cabaña.') }}</span>
+                            </div>
                             <div class="row">
-                                <div class="col-sm-6 mb-3 d-none">
-                                    <label for="basic-url" class="form-label">{{ __('Latitud') }}</label>
-                                    <div class="input-group has-validation">
-                                        <input type="text" id="lat" name="latitud" class="form-control" placeholder="{{ __('Latitud') }}" required value="21.92147554276003" readonly>
-                                        <span class="invalid-feedback" for="lat" role="alert">
-                                            <strong></strong>
-                                        </span>
-                                    </div>
+                                <div class="col-12 mb-3">
+                                    <div id="map-form" class="rounded-3 shadow-sm border" style="min-height: 25rem; width: 100%;"></div>
                                 </div>
-                                <div class="col-sm-6 mb-3 d-none">
-                                    <label for="basic-url" class="form-label">{{ __('Longitud') }}</label>
-                                    <div class="input-group has-validation">
-                                        <input type="text" id="lng" name="longitud" class="form-control" placeholder="{{ __('Longitud') }}" required value="-102.6948151589334" readonly>
-                                        <span class="invalid-feedback" for="lng" role="alert">
-                                            <strong></strong>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 mb-3">
-                                    <label for="basic-url" class="form-label">{{ __('Ubicación') }}</label>
-                                    <div id="map-form" class="bg-primary" style="min-height: 22rem;"></div>
+                                <div class="col-sm-6 d-none">
+                                    <input type="text" id="lat" name="latitud" readonly value="21.92147554276003">
+                                    <input type="text" id="lng" name="longitud" readonly value="-102.6948151589334">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-sm-12">
-                            <div class="row d-flex">
-                                <h2 class="h5 mt-3 fw-bold">Elementos Incluidos</h2>
-
-                                <div class="col-sm-12">
-                                    <div class="row">
-                                        <div class="col-xl-1 col-lg-2 col-md-3 col-sm-3 mb-3">
-                                            <label for="basic-url" class="form-label">{{ __('Ícono') }}</label>
-                                            <div class="input-group has-validation">
-                                                <select type="text" id="icon" name="icon" class="form-select icon-select" placeholder="{{ __('Icono') }}" required>
-                                                    <option value="users-alt" class="fs-5"> &#xea11; </option>
-                                                    <option value="restaurant" class="fs-5"> &#xe9a8; </option>
-                                                    <option value="bath" class="fs-5"> &#xec4a; </option>
-                                                    <option value="swimmer" class="fs-5"> &#xeb20; </option>
-                                                    <option value="fire" class="fs-5"> &#xec4d; </option>
-                                                    <option value="trees" class="fs-5"> &#xeadf; </option>
-                                                    <option value="tv-retro" class="fs-5"> &#xe975; </option>
-                                                    <option value="wifi" class="fs-5"> &#xe97f; </option>
-                                                    <option value="bed" class="fs-5"> &#xeb29; </option>
-                                                    <option value="bed-double" class="fs-5"> &#xeb24; </option>
-                                                    <option value="estate" class="fs-5"> &#xeca5; </option>
-                                                </select>
-                                                <span class="invalid-feedback" for="icon" role="alert">
-                                                    <strong></strong>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 col-lg-3 mb-3">
-                                            <label for="basic-url" class="form-label">{{ __('Título') }}</label>
-                                            <div class="input-group has-validation">
-                                                <input type="text" id="title" name="title" class="form-control" placeholder="{{ __('Título') }}" required>
-                                                <span class="invalid-feedback" for="title" role="alert">
-                                                    <strong>Este campo es obligatorio</strong>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <label for="basic-url" class="form-label">{{ __('Especificaciones') }}</label>
-                                            <div class="input-group has-validation">
-                                                <input type="text" id="specifications" name="specifications" class="form-control" placeholder="{{ __('Especificaciones') }}" required>
-                                                <span class="invalid-feedback" for="specifications" role="alert">
-                                                    <strong></strong>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-1" id="amenitie-col">
-                                            <label for="">&nbsp;</label>
-                                            <button id="saveAmenitieBtn" type="button" onclick="saveAmenidad()" class="btn btn-outline-secondary btn-icon rounded-circle d-flex align-items-center justify-content-center">
-                                                <i class="uil uil-save fs-5 d-flex align-items-center justify-content-center"></i>
-                                                <span>Agregar Elemento</span>
-                                            </button>
-                                        </div>
+                        <!-- Tab 3: Amenidades -->
+                        <div class="tab-pane fade" id="amenities-pane" role="tabpanel" aria-labelledby="amenities-tab-nav">
+                            <div class="bg-light p-3 rounded-3 mb-4 shadow-sm border">
+                                <div class="row align-items-end">
+                                    <div class="col-xl-2 col-lg-3 col-md-4 mb-3 mb-md-0">
+                                        <label class="form-label fw-bold small text-muted text-uppercase">{{ __('Ícono') }}</label>
+                                        <select id="icon" class="form-select icon-select rounded-3">
+                                            <option value="users-alt">&#xea11; Habitantes</option>
+                                            <option value="restaurant">&#xe9a8; Cocina</option>
+                                            <option value="bath">&#xec4a; Baño</option>
+                                            <option value="swimmer">&#xeb20; Alberca</option>
+                                            <option value="fire">&#xec4d; Fogata</option>
+                                            <option value="trees">&#xeadf; Exterior</option>
+                                            <option value="tv-retro">&#xe975; TV</option>
+                                            <option value="wifi">&#xe97f; Wi-Fi</option>
+                                            <option value="bed">&#xeb29; Camas</option>
+                                            <option value="estate">&#xeca5; Estructura</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-4 col-md-8 mb-3 mb-md-0">
+                                        <label class="form-label fw-bold small text-muted text-uppercase">{{ __('Título') }}</label>
+                                        <input type="text" id="title" class="form-control rounded-3" placeholder="Ej: Habitaciones">
+                                    </div>
+                                    <div class="col-xl-5 col-lg-3 col-md-9 mb-3 mb-lg-0">
+                                        <label class="form-label fw-bold small text-muted text-uppercase">{{ __('Especificaciones') }}</label>
+                                        <input type="text" id="specifications" class="form-control rounded-3" placeholder="Ej: 2 camas matrimoniales">
+                                    </div>
+                                    <div class="col-xl-2 col-lg-2 col-md-3">
+                                        <button type="button" onclick="saveAmenidad()" class="btn btn-primary w-100 rounded-3 py-2 text-uppercase fw-bold small">
+                                            <i class="uil uil-plus me-1"></i> {{ __('Añadir') }}
+                                        </button>
                                     </div>
                                 </div>
-
-                                <div class="row" id="amenidades-container">
-                                    <!-- <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex align-items-center mb-3 amenidad-card" id="amenidad-1">
-                                        <div class="d-flex flex-fill p-2 rounded-3 position-relative" style="border: 1px solid #e2e2e2">
-                                            <div class="d-flex align-items-center justify-content-center">
-                                                <span class="text-dark rounded d-flex justify-content-center align-items-center" style="width: 2.5rem; height: auto; aspect-ratio: 1/1; background: hsla(95,6%,15%,0.1)">
-                                                    <i class="p-0 m-0 uil uil-bath fs-4"></i>
-                                                </span>    
-                                            </div>
-                                            <div class="d-flex w-100 flex-column ps-3 d-flex justify-content-center">
-                                                <h6 class="m-0 fw-bold">Amenidad 1</h6>
-                                                <p class="m-0" style="color: #bbb">términos</p>
-                                            </div>
-                                            <button type="button" onclick="removeItem(1)" class="btn btn-xs btn-danger text-white badge-pill position-absolute top-0 start-100 translate-middle p-1 rounded-circle d-flex justify-content-center align-items-center">
-                                                <i class="uil uil-times d-flex align-items-center justify-content-center"></i>
-                                            </button>
-                                        </div>
-                                    </div> -->
-                                </div>
+                            </div>
+                            <div class="row g-3" id="amenidades-container" style="max-height: 300px; overflow-y: auto;">
+                                <!-- Se llenará dinámicamente -->
                             </div>
                         </div>
 
-                        <div class="col-sm-12">
-                            <div class="row d-flex">
-                                <h2 class="h5 mt-3 fw-bold">Galería</h2>
+                        <!-- Tab 4: Galería -->
+                        <div class="tab-pane fade" id="gallery" role="tabpanel" aria-labelledby="gallery-tab">
+                            <div class="alert alert-warning border-0 shadow-sm d-flex align-items-center mb-3">
+                                <i class="uil uil-image-v fs-4 me-2"></i>
+                                <span class="small">{{ __('Sube imágenes de alta calidad para que tu cabaña resalte. Puedes arrastrar varias a la vez.') }}</span>
                             </div>
-                            <div id="drop" style="min-height: 8rem; width: 100%; border-radius: 0.5rem; border: 1px solid #ccc; cursor: pointer;">
+                            <div id="drop" class="rounded-3 border-dashed border-2 p-4 text-center bg-light" style="min-height: 15rem; cursor: pointer; border: 2px dashed #ccc;">
+                                <!-- Dropzone/ImageUploader se inicializa aquí -->
                             </div>
                         </div>
-                    
                     </div>
                 </div>
             </form>
@@ -822,7 +769,7 @@
             //console.log({preloaded});
 
             $.ajax({
-                url: "{{ route('cabañas.store'); }}",
+                url: "{{ route('cabañas.store') }}",
                 method: 'POST',
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'

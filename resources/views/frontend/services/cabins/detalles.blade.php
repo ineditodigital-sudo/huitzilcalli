@@ -100,7 +100,7 @@
 
         <header class="bg-own-secondary text-light py-4">
             <div class="container d-flex justify-content-between flex-wrap">
-                <h1 class=" text-uppercase text-light p-0 mb-0 flex-fill cabin-title" style="font-family: 'Oswald'; letter-spacing: 0.35rem">{{ $cabin->name }}</h1>
+                <h1 class="text-light p-0 mb-0 flex-fill cabin-title" style="font-family: 'Oswald'; letter-spacing: 0.1rem">{{ $cabin->name }}</h1>
                 <div class="d-flex x-flex-fill title-icons">
                     <button type="button" onclick="" class="d-none btn btn-outline-light rounded-pill d-flex align-items-center justify-content-center mx-1 availability-button">
                         <i class="uil uil-calendar-alt fs-5 d-flex align-items-center justify-content-center me-2"></i>
@@ -126,7 +126,7 @@
                         <div class="card">
                             <div class="card-header d-flex align-items-center">
                                 <i class="uil uil-user me-3 fs-5"></i>
-                                <h2 class="fs-4 fw-bold mb-0">Descripción</h2>
+                                <h2 class="fs-4 fw-bold mb-0" style="color: #194421;">Descripción</h2>
                             </div>
                             <div class="card-body">
                                 <p>{{ $cabin->description }}</p>
@@ -549,8 +549,7 @@
                 themeSystem: 'bootstrap5',
                 selectable: true,
                 locale: 'es',
-                showNonCurrentDates: true,
-                longPressDelay: 0,
+                showNonCurrentDates: false,
                 validRange: {
                     start: formatDate(),
                     // end: formatDate(new Date(new Date().getFullYear()+1, 12, 1))
