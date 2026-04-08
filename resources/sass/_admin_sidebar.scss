@@ -1,0 +1,68 @@
+@use "sass:map";
+
+.aiz-sidebar{
+    &.left{
+        background: map.get($theme-colors,"secondary");
+    }
+
+    .aiz-side-nav-logo-wrap{
+        a{
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Oswald';
+            font-weight: lighter;
+            letter-spacing: 0.35rem;
+            font-size: 1.3rem;
+        }
+    }
+
+
+    .brand-icon{
+        filter: contrast(4.5) grayscale(1) invert(1);
+        mix-blend-mode: lighten !important;
+    }
+
+    .aiz-side-nav-logo-wrap{
+        background: map.get($theme-colors,"secondary");
+    }
+
+    .aiz-side-nav-list {
+        .aiz-side-nav-link{
+            color: #fffa;
+
+            &:hover,
+            &.active,
+            &.level-2-active,
+            &.level-3-active{
+                color: #fff;
+                background: map.get($theme-colors,"dark");
+
+                .aiz-side-nav-icon{
+                    color: map.get($theme-colors, "primary");
+                }
+            }
+        }
+
+        .level-2{
+            .aiz-side-nav-link{
+                &:hover, &.active{
+                    &::after{
+                        background: #fffc;
+                    }
+                }
+                
+                &::after{
+                    background: #fff8;
+                }
+            }
+        }
+
+        .aiz-side-nav-icon{
+            color: #fffa;
+
+            &:hover{
+                color: map.get($theme-colors, "primary");
+            }
+        }
+    }
+}

@@ -1,0 +1,653 @@
+/* GENERAL */
+:root {
+    --doc-height: 100%;
+    --secondary: #194421;
+    --secondary-light: #416145;
+}
+.footer-detail-page{
+    background-color: #04A39E;
+}
+.bg-own-secondary {
+    background:#04A39E;
+}
+
+.bg-own-secondary-light {
+    background:#E6F6F5;
+}
+
+.btn-own-secondary-light {
+    background:#04A39E;
+}
+
+.btn-own-secondary-light.active,
+.btn-own-secondary-light:focus,
+.btn-own-secondary-light:focus-visible,
+.btn-own-secondary-light:active,
+.btn-own-secondary-light:hover {
+    background: #608f66 !important;
+}
+
+.no-arrow::after {
+    display: none;
+}
+
+/* GENERAL */
+
+/* INDEX */
+#index-body {
+    background-color: white;
+    /*background-image:
+        radial-gradient(at 82% 99%, hsla(180, 100%, 86%, 1) 0px, transparent 50%),
+        radial-gradient(at 16% 0%, hsla(180, 100%, 86%, 1) 0px, transparent 50%);*/
+}
+
+#home-section {
+    height: 100vh;
+    /* fallback for Js load */
+    height: var(--doc-height);
+}
+
+#home-section #title-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#cabins-section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.cabin-card {
+    border-radius: 2rem;
+    background: #04A39E;
+    transition: all 0.15s ease-in-out;
+}
+
+.nombreCabania {
+    height: 70px;
+}
+
+.cabin-card .card-icon {
+    display: none;
+}
+
+.cabin-card:hover {
+    transform: translateY(-1rem);
+    background: #04A39E;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .25) !important;
+}
+
+.cabin-card .img-container {
+    aspect-ratio: 1/0.6;
+}
+
+.maindsoft-a {
+    color: #bbb;
+    transition: all 0.15s ease-in-out;
+}
+
+.maindsoft-a:hover,
+.maindsoft-a:focus,
+.maindsoft-a:active,
+.maindsoft-a.active {
+    color: var(--bs-primary);
+}
+
+.g-section {
+    display: none;
+}
+
+#b1 {
+    width: 40%;
+    max-width: 40%;
+    top: 5rem;
+    left: 0;
+    border-radius: 1rem;
+}
+
+#b2 {
+    width: 60%;
+    max-width: 60%;
+    bottom: 10rem;
+    left: 5rem;
+    border-radius: 1rem;
+}
+
+#b3 {
+    top: 9.7rem;
+    right: 6rem;
+    width: 40%;
+    max-width: 40%;
+    border-radius: 1rem;
+}
+
+.index-section-2 {
+    padding: 5rem 12rem;
+}
+
+.index-section-2 .index-main {
+    font-size: 2.5rem;
+}
+
+.index-section-2 .index-secondary {
+    font-size: 5rem
+}
+
+#calendar .fc-day-disabled {
+    cursor: no-drop;
+    background: var(--bs-light);
+}
+
+.nav.nav-pills .nav-link {
+    color: var(--bs-secondary);
+}
+
+.nav.nav-pills .nav-link.active,
+.nav.nav-pills .nav-link:hover {
+    background: white;
+}
+
+.nav.nav-pills .nav-link h1,
+.nav.nav-pills .nav-link h1 {
+    border: 2px solid var(--bs-primary);
+    color: var(--bs-dark);
+}
+
+.nav.nav-pills .nav-link.active h1,
+.nav.nav-pills .nav-link:hover h1 {
+    color: white;
+    background: var(--bs-primary);
+}
+
+.nav.nav-pills .nav-link.active p,
+.nav.nav-pills .nav-link:hover p {
+    font-weight: bold;
+}
+
+#help-button {
+    display: none !important;
+}
+
+#help-button span.text-1 {
+    display: none !important;
+}
+
+#help-button i {
+    margin-right: 0.5rem;
+}
+
+.instruction-tabs {
+    display: none;
+}
+
+#pills-tabContent .tab-pane {
+    display: block;
+    opacity: 1;
+    margin-bottom: 0.5rem;
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (min-width: 200px) and (max-width: 561px) {
+    .index-section-2 {
+        padding: 5rem 2rem;
+    }
+
+    .index-section-2 .col-4:not(.col-img),
+    .index-section .col-lg-5 {
+        /*display: none;*/
+        height: 36rem;
+        margin-top: -6rem;
+        margin-bottom: -6rem;
+        padding: 0rem;
+        /*margin-left: 10%;*/
+        /*margin-right: 10%;*/
+    }
+
+    #b1 {
+        left: 2.5rem;
+        border-radius: 1rem;
+    }
+
+    #b2 {
+        bottom: 9.5rem;
+    }
+
+    #b3 {
+        right: 2.5rem;
+    }
+
+    .index-section-2 .col-md-4.col-sm-6.col-xs-6 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .index-section-2 .index-main {
+        font-size: 2rem;
+    }
+
+    .index-section-2 .index-secondary {
+        font-size: 2.5rem;
+    }
+
+    #b3 {
+        width: 33%;
+    }
+
+    .caba���a-section>div.row {
+        padding: 3rem 0 !important;
+    }
+
+    .form-group.d-flex.mt-4 {
+        justify-content: center;
+    }
+
+    .g-section {
+        display: block;
+    }
+
+    .gallery-section {
+        display: none;
+    }
+
+    #calendar {
+        min-height: 37rem;
+    }
+
+    .nav .nav-item h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav .nav-item button {
+        width: 100%;
+    }
+
+    .nav .nav-item p {
+        font-size: 0.9rem !important;
+    }
+
+    .cabin-title {
+        text-align: center;
+    }
+
+    .title-icons {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    #help-button span.text-2,
+    #sym-button {
+        display: none !important;
+    }
+
+    #help-button span.text-1 {
+        display: block !important;
+    }
+
+    #help-button {
+        display: flex !important;
+        border-radius: 3rem;
+    }
+
+    #help-button i {
+        margin-left: 0.5rem;
+        margin-right: 0rem;
+    }
+
+    #cabins-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .cabin-card {
+        border-radius: 1rem;
+    }
+
+    .nombreCabania {
+        height: unset;
+    }
+
+    .cabin-card .card-icon {
+        display: block;
+    }
+
+    .cabin-card:hover {
+        transform: translateY(0);
+        box-shadow: none !important;
+    }
+
+    .cabin-card .img-container {
+        aspect-ratio: unset;
+        display: none !important;
+    }
+
+    .imgCab-container {
+        display: none !important;
+    }
+
+    #home-section #title-section {
+        padding-top: 1.5rem;
+    }
+
+    #steps-section {
+        display: none;
+    }
+
+    .instruction-tabs {
+        display: flex;
+    }
+
+
+    #pills-tabContent .tab-pane {
+        display: none;
+        opacity: 0;
+        margin-bottom: 0;
+    }
+
+    #pills-tabContent .tab-pane {
+        display: none;
+        opacity: 0;
+        margin-bottom: 0;
+    }
+
+    #pills-tabContent .tab-pane.active {
+        display: block;
+    }
+
+    #pills-tabContent .tab-pane.show {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 562px) and (max-width: 767px) {
+    .index-section-2 {
+        padding: 5rem 2rem;
+    }
+
+    .index-section-2 .col-4:not(.col-img),
+    .index-section .col-lg-5 {
+        display: none;
+    }
+
+    .index-section-2 .col-md-4.col-sm-6.col-xs-6 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .caba���a-section>div.row {
+        padding: 3rem 0 !important;
+    }
+
+    .form-group.d-flex.mt-4 {
+        justify-content: center;
+    }
+
+    #help-button span.text-2,
+    #sym-button {
+        display: none;
+    }
+
+    #help-button span.text-1 {
+        display: block !important;
+    }
+
+    #help-button {
+        border-radius: 3rem;
+        display: flex !important;
+    }
+
+    #help-button i {
+        margin-left: 0.5rem;
+        margin-right: 0rem;
+    }
+
+    #steps-section {
+        display: none;
+    }
+
+    .instruction-tabs {
+        display: flex;
+    }
+
+    #pills-tabContent .tab-pane {
+        display: none;
+        opacity: 0;
+        margin-bottom: 0;
+    }
+
+    #pills-tabContent .tab-pane.active {
+        display: block;
+    }
+
+    #pills-tabContent .tab-pane.show {
+        opacity: 1;
+    }
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (min-width: 768px) {
+    .index-section-2 {
+        padding: 5rem 2rem;
+    }
+
+    .index-section-2 .col-4 {
+        display: block;
+    }
+
+    .index-section-2 .col-lg-5 {
+        display: none;
+    }
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (min-width: 992px) {
+    .index-section-2 {
+        padding: 5rem 2rem;
+    }
+
+    .index-section-2 .index-main {
+        font-size: 2.5rem;
+    }
+
+    .index-section-2 .index-secondary {
+        font-size: 4rem
+    }
+
+    .index-section-2 .col-4,
+    .index-section .col-lg-5 {
+        display: block;
+    }
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (min-width: 1081px) {
+    .index-section-2 {
+        padding: 5rem 4rem;
+    }
+
+    .index-section-2 .index-secondary {
+        font-size: 4rem
+    }
+
+    .index-section-2 .col-4,
+    .index-section .col-lg-5 {
+        display: block;
+    }
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (min-width: 1200px) {
+    .index-section-2 {
+        padding: 5rem 4rem;
+    }
+
+    .index-section-2 .index-secondary {
+        font-size: 5rem
+    }
+
+    .index-section-2 .col-4,
+    .index-section .col-lg-5 {
+        display: block;
+    }
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (min-width: 1400px) {
+    .index-section-2 {
+        padding: 5rem 5rem;
+    }
+
+    .index-section-2 .index-secondary {
+        font-size: 5rem
+    }
+
+    .index-section-2 .col-4,
+    .index-section .col-lg-5 {
+        display: block;
+    }
+}
+
+/* `xxxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (min-width: 1800px) {
+    .index-section-2 {
+        padding: 5rem 10rem;
+    }
+
+    .index-section-2 .index-secondary {
+        font-size: 5rem
+    }
+
+    .index-section-2 .col-4,
+    .index-section .col-lg-5 {
+        display: block;
+    }
+}
+
+/* INDEX */
+
+/* DETALLES */
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (min-width: 200px) and (max-width: 561px) {
+    .title-icons {
+        justify-content: center;
+        /*margin-top: 1rem;*/
+    }
+
+    .gallery-section {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        padding-bottom: 5% !important;
+    }
+
+    .gallery-section .g2 {
+        gap: 0.7rem !important;
+        height: max-content;
+        aspect-ratio: 1/0.6;
+        padding-top: 0.7rem;
+    }
+
+    .gallery-section .g2>div,
+    .gallery-section .g2>div>div>div {
+        gap: 0.7rem !important;
+    }
+
+    #map-dropdown {
+        display: block !important;
+    }
+
+    .map-buttons {
+        display: none !important;
+    }
+
+    #availability-float-button {
+        display: block !important;
+    }
+
+    .availability-button {
+        display: none !important;
+    }
+}
+
+@media (min-width: 562px) and (max-width: 767px) {
+    .title-icons {
+        justify-content: center;
+        /*margin-top: 1rem;*/
+    }
+
+    #map-dropdown {
+        display: block !important;
+    }
+
+    .map-buttons {
+        display: none !important;
+    }
+
+    #availability-float-button {
+        display: block !important;
+    }
+
+    .availability-button {
+        display: none !important;
+    }
+}
+
+
+.fc-daygrid-day {
+    cursor: pointer;
+}
+
+.fc-daygrid-day:hover {}
+
+.fc-bg-event {
+    cursor: no-drop;
+    background-size: 14px 14px !important;
+    background-image: repeating-linear-gradient(45deg, #cf3a42 0, #cf3a42 1.4000000000000001px, #ff5b64 0, #ff5b64 50%) !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background: transparent !important;
+}
+
+.fc .fc-button-primary {
+    background-color: var(--bs-secondary) !important;
+    border-color: var(--bs-secondary) !important;
+    transition: all 0.15s ease-in-out;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus,
+.fc .fc-button-primary:not(:disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, .5) !important;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #f000 !important;
+}
+
+.fc .fc-button-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(76, 91, 106, .5) !important;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+.fc-col-header-cell-cushion {
+    cursor: default;
+    transition: color 0.15s ease-in-out;
+}
+
+.fc-col-header-cell-cushion:hover {
+    color: var(--bs-primary) !important;
+}
+
+.fc-toolbar-title {
+    color: #272a2580;
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+}
+
+/* DETALLES */

@@ -1,0 +1,245 @@
+/* CALENDAR */
+.fc .fc-daygrid-day.fc-day-today{
+    background: transparent !important;
+}
+
+.fc-bg-event:not(.jacuzzi-full-day){
+    cursor: no-drop;
+    background-size: 14px 14px !important;
+    background-image: repeating-linear-gradient(45deg, #cf3a42 0, #cf3a42 1.4000000000000001px, #ff5b64 0, #ff5b64 50%) !important;
+}
+
+.fc .fc-bg-event.jacuzzi-full-day{
+    opacity: 1;    
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+.fc .fc-button-primary{
+    background-color: var(--bs-secondary) !important;
+    border-color: var(--bs-secondary) !important;
+    transition: all 0.15s ease-in-out;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(76,91,106,.5) !important;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #f000 !important;
+}
+
+.fc .fc-button-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(76,91,106,.5) !important;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+.fc-col-header-cell-cushion{
+    cursor: default;
+    transition: color 0.15s ease-in-out;
+}
+
+.fc-col-header-cell-cushion:hover{
+    color: var(--bs-primary) !important;
+}
+
+.fc .fc-daygrid-day-frame{
+    padding: 0 !important;
+}
+
+.fc .fc-daygrid-day-top{
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.fc-toolbar-title{
+	color: #272a2580;
+	font-size: 1.35rem!important;
+	font-weight: 700!important;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-start{
+    border-bottom-left-radius: 5rem;
+    border-top-left-radius: 5rem;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end{
+    border-bottom-right-radius: 5rem;
+    border-top-right-radius: 5rem;
+}
+
+#calendar-section:not(.jacuzzi-calendar) .fc-direction-ltr .fc-daygrid-event .fc-event-time{
+    display: none;
+}
+
+.fc-daygrid-block-event .fc-event-title{
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 2px 0.5rem;
+}
+
+.fc-event:not(.fc-event-start) .fc-event-title{
+    background: transparent !important;
+    color: transparent !important;
+}
+
+.fc-h-event{
+    background: transparent;
+    border: 2px solid var(--bs-secondary);
+    transition: all ease-in-out 0.15s;
+}
+
+.fc-h-event:hover{
+    background: var(--bs-secondary);
+}
+
+.fc-h-event .fc-event-title{
+    /*color: var(--bs-secondary);*/
+    transition: all ease-in-out 0.15s;
+}
+
+.fc-h-event:hover .fc-event-title{
+    color: #fff;
+}
+/* CALENDAR */
+
+/* RESERVATION CARDS */
+.accordion-button{
+    padding: 0.5rem !important;
+    background: white !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed){
+    color: var(--bs-secondary);
+}
+/* RESERVATION CARDS */
+
+/* HEADER */
+.aiz-topbar{
+    z-index: 1027;
+}
+/* HEADER */
+
+/* CABINS CARD */
+#saveAmenitieBtn span{
+    display: none;
+}
+
+@media (min-width: 200px) and (max-width: 561px) {
+    #amenitie-col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #amenitie-col{
+        display: flex;
+    }
+    
+    #saveAmenitieBtn{
+        width: initial;
+        border-radius: 0.5rem !important;
+    }
+    
+    #saveAmenitieBtn i{
+        margin-right: 0.5rem;
+    }
+    
+    #saveAmenitieBtn span{
+        display: block;
+    }
+    
+    #calendar{
+        min-height: 37rem;
+    }
+    
+    #calendar-section{
+        flex-direction: column-reverse;
+    }
+    
+    .revs-card-container{
+        /* display: none; */
+    }
+    
+    .fc-daygrid-block-event .fc-event-title{
+        font-size: 0.6rem;
+        font-weight: lighter;
+        padding: 2px;
+    }
+    
+    .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events{
+        display: flex;
+        /*justify-content: space-evenly;*/
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start{
+        margin-right: unset;
+    }
+    
+    .fc-direction-ltr .fc-daygrid-event.fc-event-start, .fc-direction-rtl .fc-daygrid-event.fc-event-end{
+        margin-left: unset;
+    }
+    
+    .fc-daygrid-dot-event .fc-event-title{
+        display: none;
+    }
+    
+    .fc .fc-daygrid-day-bottom{
+        display: none;
+    }
+}
+
+@media (min-width: 562px) and (max-width: 767px) {
+    #amenitie-col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #saveAmenitieBtn{
+        width: initial;
+        border-radius: 0.5rem !important;
+    }
+    
+    #saveAmenitieBtn i{
+        margin-right: 0.5rem;
+    }
+    
+    #saveAmenitieBtn span{
+        display: block;
+    }
+}
+/* CABINS CARD */
+
+/* LOADER */
+.loading{
+    display: none !important;
+}
+.loading.show{
+    display: flex !important;
+    background: #0006;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+}
+/* LOADER */

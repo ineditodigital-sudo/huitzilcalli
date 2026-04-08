@@ -1,0 +1,56 @@
+@use "sass:map";
+
+/* CALENDAR */
+.fc-theme-standard {
+    .fc-scrollgrid{
+        border: none;
+    }
+}
+
+.fc-theme-standard td, .fc-theme-standard th{
+    border: none;
+    padding: 0.5rem;
+}
+
+.fc{
+    .fc-daygrid-day-frame{
+        border: 1px solid #eee;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .fc-daygrid-day-bg{
+        // border-radius: 0.5rem;
+    }
+
+    .fc-daygrid-day-number{
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(map.get($theme-colors,"success"), 0.63);
+        aspect-ratio: 1/1;
+        padding: 0.15rem;
+        height: auto;
+        display: flex;
+        border-radius: 5rem;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+    }
+
+    .fc-toolbar-title{
+        text-transform: capitalize;
+    }
+
+    .fc-highlight{
+        background: rgba(map.get($theme-colors,"primary"), 0.35);
+        border: 2px solid map.get($theme-colors,"primary");
+        border-radius: 0.5rem;
+    }
+}
+
+.fc-col-header-cell-cushion{
+    text-decoration: none;
+    color: map.get($theme-colors,"dark");
+    text-transform: uppercase;
+}
+/* CALENDAR */

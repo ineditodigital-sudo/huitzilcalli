@@ -1,0 +1,51 @@
+@use "sass:map";
+
+/* HOME */
+.navbar-brand{
+    img{
+        max-height: 3rem;
+    }
+}
+
+.custom-nav{
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+
+    .nav-link{
+        transition: all 0.15s ease-in-out;
+    }
+
+    .navbar-brand img{
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.custom-nav.nav-scrolled{
+    background: map.get($theme-colors,"primary");
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+
+    .nav-link{
+        color: #fffc;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+
+    .navbar-brand img{
+        filter: contrast(4.5) grayscale(1) invert(1);
+        mix-blend-mode: lighten;
+    }
+}
+
+.main-section, .cabaña-section{
+    h1, h4{
+        font-family: 'Oswald';
+    }
+}
+
+.cabin-gallery{
+    filter: drop-shadow(0 0.125rem 7.25rem hsla(33,81%,60%,0.63));
+}
+
+/* HOME */

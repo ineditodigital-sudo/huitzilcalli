@@ -1,0 +1,16 @@
+[12-Apr-2025 17:49:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/huitzilcalli/public_html/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/routes/api.php on line 17
+[12-Apr-2025 17:49:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/huitzilcalli/public_html/routes/web.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/routes/web.php on line 19
+[01-Jun-2025 14:35:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/huitzilcalli/public_html/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/routes/api.php on line 17
+[01-Jun-2025 14:35:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/huitzilcalli/public_html/routes/web.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/huitzilcalli/public_html/routes/web.php on line 19

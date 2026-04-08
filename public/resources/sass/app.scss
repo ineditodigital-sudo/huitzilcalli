@@ -1,0 +1,20 @@
+// Fonts
+// @import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Custom
+@import 'general';
+@import 'home';
+@import 'login';
+@import 'detalles';
+@import 'calendar';
+@import 'admin_navbar';
+@import 'admin_sidebar';
+
+@import 'custom';
